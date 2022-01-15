@@ -1,9 +1,11 @@
 from dinosaur import Dinosaur
 
+
 class Herd:
     def __init__(self):
         self.herd_list = []
         self.herd()
+
 
     def herd(self):
         trex = Dinosaur("Trex", 100, 25)

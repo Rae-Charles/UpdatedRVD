@@ -1,13 +1,15 @@
 from weapon import Weapon
 
+
 class Robot:
     def __init__(self, name, health):
         self.name = name
         self.health = health
         self.attack_power = 25
         self.power_level = 50
-        self.weapon_names = ["laser cannon", "plasma rifle", "lightsaber"]
+        self.weapon_names = ["gatling gun", "M79 Grenade Launcher", "laser rifle"]
         self.set_weapon()
+
 
     def set_weapon(self):
         loop = True
@@ -38,6 +40,7 @@ class Robot:
                 continue
             else:
                 print("please use the 'y' or 'n' keys to make a selection.")
+
 
     def robo_attack(self, dino_to_attack):
         dino_to_attack.health -= self.attack_power
