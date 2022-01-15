@@ -9,7 +9,7 @@ class Battlefield:
         self.herd = Herd()
     
     def run_game(self):
-        print("--- Begin Battle ---")
+        print("Begin Battle. May the odds be ever in your favor!")
         self.battle()
         self.dino_turn()
         self.robot_turn()
@@ -48,7 +48,7 @@ class Battlefield:
                 self.battle()
         if self.fighting_dino.health <= 0:
             self.herd.herd_list.remove(self.fighting_dino)
-            print(f"{self.fighting_dino.name} has been defeated.")
+            print(f"{self.fighting_dino.name} has been defeated. The odds were not in your favor.")
             if len(self.herd.herd_list) == 0:
                 self.display_winner()
             else:
