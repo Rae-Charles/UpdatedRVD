@@ -59,14 +59,14 @@ class Battlefield:
             self.robot_turn()
         if self.fighting_robot.health <= 0:
             self.fleet.fleet_list.remove(self.fighting_robot)
-            print(f"{self.fighting_robot.name} has been defeated.")
+            print(f"{self.fighting_robot.name} has been defeated, better luck next time.")
             if len(self.fleet.fleet_list) == 0:
                 self.display_winner()
             else:
                 self.battle()
         if self.fighting_dino.health <= 0:
             self.herd.herd_list.remove(self.fighting_dino)
-            print(f"{self.fighting_dino.name} has been defeated.")
+            print(f"{self.fighting_dino.name} has been defeated, better luck next time.")
             if len(self.herd.herd_list) == 0:
                 self.display_winner()
             else:
@@ -74,8 +74,8 @@ class Battlefield:
 
     def display_winner(self):
         if len(self.fleet.fleet_list) == 0:
-            print("The dinosaurs defeated the robots!")
+            print("The dinosaurs defeated the robots, great job!")
             sys.exit()
         else:
-            print("The robots defeated the dinosaurs!")
+            print("The robots defeated the dinosaurs, great work Terminators!")
             sys.exit()
