@@ -41,7 +41,7 @@ class Battlefield:
             self.dino_turn()
         if self.fighting_robot.health <= 0:
             self.fleet.fleet_list.remove(self.fighting_robot)
-            print(f"{self.fighting_robot.name} has been defeated.")
+            print(f"{self.fighting_robot.name} has been defeated. Better luck next time!")
             if len(self.fleet.fleet_list) == 0:
                 self.display_winner()
             else:
